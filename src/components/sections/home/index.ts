@@ -1,0 +1,10 @@
+export { HeroSection } from "./HeroSection";
+export { TrustBarSection } from "./TrustBarSection";
+export { CoreProblemSection } from "./CoreProblemSection";
+export { CountryComparisonSection } from "./CountryComparisonSection";
+export { WhyYolotripzSection } from "./WhyYolotripzSection";
+export { ProcessSection } from "./ProcessSection";
+export { TestimonialsSection } from "./TestimonialsSection";
+export { SeptemberIntakeSection } from "./SeptemberIntakeSection";
+export { BlogPreviewSection } from "./BlogPreviewSection";
+export { FinalCtaSection } from "./FinalCtaSection";

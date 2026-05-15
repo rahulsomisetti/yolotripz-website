@@ -1,0 +1,1 @@
+export { InsightsIndex } from "./InsightsIndex";

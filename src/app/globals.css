@@ -1,0 +1,64 @@
+@import "../styles/brand-generated.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer base {
+  :root {
+    /* Legacy names → semantic brand scale (see `docs/BRANDING.md`) */
+    --navy: var(--brand-primary);
+    --gold: var(--brand-accent);
+    --accent: var(--brand-link);
+    --surface: var(--brand-surface);
+
+    --background: var(--brand-surface-tint);
+    --foreground: var(--brand-primary);
+    --card: var(--brand-surface);
+    --card-foreground: var(--brand-primary);
+    --popover: var(--brand-surface);
+    --popover-foreground: var(--brand-primary);
+    --primary: var(--brand-cta);
+    --primary-foreground: var(--brand-cta-foreground);
+    --secondary: var(--brand-muted);
+    --secondary-foreground: var(--brand-primary);
+    --muted: var(--brand-muted);
+    --muted-foreground: var(--brand-muted-foreground);
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: var(--brand-border);
+    --input: var(--brand-border);
+    --ring: var(--brand-cta);
+    --radius: 0.75rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  color: hsl(var(--foreground));
+  /* @apply cannot use opacity modifiers (e.g. bg-primary/12) — use modern hsl + alpha */
+  background-color: hsl(var(--primary) / 0.12);
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+}

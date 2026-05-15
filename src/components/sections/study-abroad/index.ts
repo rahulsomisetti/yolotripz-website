@@ -1,0 +1,10 @@
+export { StudyAbroadHero } from "./StudyAbroadHero";
+export { StudyAbroadDecision } from "./StudyAbroadDecision";
+export { StudyAbroadCountries } from "./StudyAbroadCountries";
+export { StudyAbroadIntakes } from "./StudyAbroadIntakes";
+export { StudyAbroadScholarships } from "./StudyAbroadScholarships";
+export { StudyAbroadCourses } from "./StudyAbroadCourses";
+export { StudyAbroadProcess } from "./StudyAbroadProcess";
+export { StudyAbroadFaq } from "./StudyAbroadFaq";
+export { StudyAbroadTestimonials } from "./StudyAbroadTestimonials";
+export { StudyAbroadStickyCta } from "./StudyAbroadStickyCta";

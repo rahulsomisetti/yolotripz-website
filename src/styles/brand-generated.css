@@ -1,0 +1,19 @@
+/**
+ * AUTO-GENERATED — do not edit by hand.
+ * Source: public/branding/logo-primary.png (npm run brand:extract)
+ * Revert: restore defaults from git or re-run after replacing the logo.
+ */
+:root {
+  --brand-primary: 146 17% 18%;
+  --brand-primary-foreground: 0 0% 100%;
+  --brand-accent: 341 42% 53%;
+  --brand-link: 146 26% 44%;
+  --brand-cta: 146 28% 40%;
+  --brand-cta-foreground: 0 0% 100%;
+  --brand-muted: 146 7% 97%;
+  --brand-muted-foreground: 146 12% 34%;
+  --brand-border: 146 9% 88%;
+  --brand-surface: 0 0% 100%;
+  --brand-surface-tint: 146 5% 99%;
+  --brand-shadow-rgb: 49 63 55;
+}
