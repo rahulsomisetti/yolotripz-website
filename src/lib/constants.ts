@@ -6,7 +6,7 @@ export const SITE = {
   country: "India",
   foundedYear: 2017,
   /** Replace with your real WhatsApp business number (digits only, country code included). */
-  whatsappE164: "919876543210",
+  whatsappE164: "919972010833",
   /** Public email for enquiries */
   email: "hello@yolotripz.com",
 } as const;
