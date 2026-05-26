@@ -41,7 +41,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative py-24 md:py-32 lg:py-40",
+        "relative py-16 md:py-20 lg:py-24",
         edge &&
           "before:pointer-events-none before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-px before:bg-gradient-to-r before:from-transparent before:via-gold/35 before:to-transparent",
         variants[variant],
@@ -52,7 +52,7 @@ export function Section({
         {(eyebrow || title || description) && (
           <header
             className={cn(
-              "mb-16 max-w-prose md:mb-24 lg:mb-28",
+              "mb-10 max-w-prose md:mb-14 lg:mb-16",
               isCenter && "mx-auto max-w-measure text-center",
             )}
           >
