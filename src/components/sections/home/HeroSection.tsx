@@ -13,12 +13,13 @@ export function HeroSection() {
   const reduce = reduceMotion === true;
 
   return (
-    <section className="relative overflow-hidden border-b border-navy/[0.06] bg-gradient-to-b from-muted/50 via-background to-background">
+    <section className="relative overflow-hidden border-b border-navy/[0.06] bg-gradient-to-b from-muted/40 via-background to-background bg-mesh-gradient">
+      <div className="pointer-events-none absolute inset-0 bg-grid-pattern opacity-40 -z-10" aria-hidden="true" />
       <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10" aria-hidden="true">
         {/* Glow 1 - Primary HSL hue (dominant forest green) */}
-        <div className="absolute -top-[10%] -left-[10%] w-[45rem] h-[45rem] rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.07)_0%,transparent_70%)] blur-[100px]" />
+        <div className="absolute -top-[10%] -left-[10%] w-[45rem] h-[45rem] rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.08)_0%,transparent_70%)] blur-[100px]" />
         {/* Glow 2 - Accent HSL hue (secondary warm/rose gold accent) */}
-        <div className="absolute top-[30%] -right-[10%] w-[40rem] h-[40rem] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.05)_0%,transparent_70%)] blur-[100px]" />
+        <div className="absolute top-[30%] -right-[10%] w-[40rem] h-[40rem] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.06)_0%,transparent_70%)] blur-[100px]" />
       </div>
       <Container className="py-20 sm:py-24 md:py-28 lg:py-32">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-x-14 xl:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] xl:gap-x-20">
@@ -77,25 +78,34 @@ export function HeroSection() {
               First conversation is free · No obligation · Most calls are ~20 minutes
             </motion.p>
             <motion.div
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.45, delay: 0.28 }}
-              className="mt-12 sm:mt-14"
+              initial={reduce ? false : { opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+              className="mt-12 sm:mt-14 grid grid-cols-2 gap-4"
             >
-              <div className="relative rounded-2xl border border-navy/[0.06] bg-card/60 backdrop-blur-md p-6 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:border-navy/[0.1] sm:p-7">
-                <div
-                  className="absolute left-0 top-0 h-full w-[4px] rounded-l-2xl bg-gradient-to-b from-gold via-gold/50 to-transparent"
-                  aria-hidden
-                />
-                <p className="pl-4 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[0.8125rem] sm:tracking-[0.15em]">
-                  Typical planning band
-                </p>
-                <p className="mt-3 max-w-prose pl-4 text-sm leading-relaxed text-muted-foreground sm:text-[0.9375rem] sm:leading-[1.62]">
-                  Many PG families we work with plan roughly{" "}
-                  <span className="font-medium text-navy">₹25–50 lakhs</span> all-in (tuition,
-                  living, contingencies). We align your shortlist to that band early so decisions stay
-                  grounded.
-                </p>
+              <div className="group relative rounded-2xl border border-navy/[0.05] bg-card/65 backdrop-blur-md p-5 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:border-navy/[0.1] hover:-translate-y-0.5">
+                <div className="absolute left-0 top-0 h-full w-[3px] rounded-l-2xl bg-gradient-to-b from-gold via-gold/50 to-transparent opacity-80" aria-hidden />
+                <p className="pl-2 font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">2017</p>
+                <p className="mt-1 pl-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Established</p>
+                <p className="mt-2 pl-2 text-xs text-muted-foreground leading-normal">Coastal Karnataka’s trusted advisory practice.</p>
+              </div>
+              <div className="group relative rounded-2xl border border-navy/[0.05] bg-card/65 backdrop-blur-md p-5 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:border-navy/[0.1] hover:-translate-y-0.5">
+                <div className="absolute left-0 top-0 h-full w-[3px] rounded-l-2xl bg-gradient-to-b from-primary via-primary/50 to-transparent opacity-80" aria-hidden />
+                <p className="pl-2 font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">UG & PG</p>
+                <p className="mt-1 pl-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Specialized</p>
+                <p className="mt-2 pl-2 text-xs text-muted-foreground leading-normal">Admissions shortlists mapped to realistic ROI goals.</p>
+              </div>
+              <div className="group relative rounded-2xl border border-navy/[0.05] bg-card/65 backdrop-blur-md p-5 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:border-navy/[0.1] hover:-translate-y-0.5">
+                <div className="absolute left-0 top-0 h-full w-[3px] rounded-l-2xl bg-gradient-to-b from-primary via-primary/50 to-transparent opacity-80" aria-hidden />
+                <p className="pl-2 font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">8 Hubs</p>
+                <p className="mt-1 pl-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Global Focus</p>
+                <p className="mt-2 pl-2 text-xs text-muted-foreground leading-normal">Top global student destinations supported.</p>
+              </div>
+              <div className="group relative rounded-2xl border border-navy/[0.05] bg-card/65 backdrop-blur-md p-5 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:border-navy/[0.1] hover:-translate-y-0.5">
+                <div className="absolute left-0 top-0 h-full w-[3px] rounded-l-2xl bg-gradient-to-b from-gold via-gold/50 to-transparent opacity-80" aria-hidden />
+                <p className="pl-2 font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">100%</p>
+                <p className="mt-1 pl-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Unbiased</p>
+                <p className="mt-2 pl-2 text-xs text-muted-foreground leading-normal">No commission-driven steering. Honest advice.</p>
               </div>
             </motion.div>
             <aside className="mt-10 border-t border-navy/[0.08] pt-8 lg:hidden">

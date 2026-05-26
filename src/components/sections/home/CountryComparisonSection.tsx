@@ -20,6 +20,17 @@ const countryFlags: Record<string, string> = {
   "new-zealand": "🇳🇿",
 };
 
+const countryStats: Record<string, { tuition: string; intakes: string; stayback: string }> = {
+  uk: { tuition: "₹18–35 Lakhs/yr", intakes: "Sep / Jan / May", stayback: "2 Years Graduate Route" },
+  usa: { tuition: "₹25–45 Lakhs/yr", intakes: "Aug / Jan (Fall & Spring)", stayback: "Up to 3 Years STEM OPT" },
+  australia: { tuition: "₹22–38 Lakhs/yr", intakes: "Feb / July (Major)", stayback: "2–4 Years PSW Pathway" },
+  "new-zealand": { tuition: "₹15–28 Lakhs/yr", intakes: "Feb / July", stayback: "1–3 Years PSW Visa" },
+  canada: { tuition: "₹15–30 Lakhs/yr", intakes: "Sep / Jan / May", stayback: "PGWP Co-op Linked" },
+  ireland: { tuition: "₹12–25 Lakhs/yr", intakes: "Sep / Jan", stayback: "2 Years Third Level Scheme" },
+  germany: { tuition: "Free to ₹6 Lakhs/yr", intakes: "Winter / Summer", stayback: "18 Months Job Search" },
+  "emerging-europe-asia": { tuition: "₹3–15 Lakhs/yr", intakes: "Sep / Jan / Paced", stayback: "Varies by Country Hub" },
+};
+
 export function CountryComparisonSection() {
   return (
     <Section
@@ -62,21 +73,25 @@ export function CountryComparisonSection() {
                       →
                     </span>
                   </div>
-                  <dl className="mt-7 space-y-5 text-sm leading-snug">
-                    <div>
-                      <dt className="font-semibold text-navy">Intake rhythm</dt>
-                      <dd className="mt-1.5 text-muted-foreground">{c.intakes}</dd>
+                  <div className="mt-6 flex flex-col gap-3.5 border-t border-navy/[0.04] pt-5">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Est. Tuition:</span>
+                      <span className="font-semibold text-navy">{countryStats[c.slug]?.tuition || "Varies"}</span>
                     </div>
-                    <div>
-                      <dt className="font-semibold text-navy">Work rights (high level)</dt>
-                      <dd className="mt-1.5 text-muted-foreground">{c.work}</dd>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Key Intakes:</span>
+                      <span className="font-semibold text-navy">{countryStats[c.slug]?.intakes || "Varies"}</span>
                     </div>
-                    <div>
-                      <dt className="font-semibold text-navy">Often fits</dt>
-                      <dd className="mt-1.5 text-muted-foreground">{c.profile}</dd>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Stay-Back PSW:</span>
+                      <span className="font-semibold text-primary">{countryStats[c.slug]?.stayback || "Varies"}</span>
                     </div>
-                  </dl>
-                  <span className="mt-auto pt-9 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-primary">
+                  </div>
+                  <div className="mt-5 rounded-xl bg-muted/50 p-3.5 text-xs text-muted-foreground leading-normal border border-navy/[0.02]">
+                    <span className="font-semibold text-navy block mb-1">Target Profile:</span>
+                    {c.profile}
+                  </div>
+                  <span className="mt-auto pt-7 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-primary">
                     View country guide
                   </span>
                 </div>

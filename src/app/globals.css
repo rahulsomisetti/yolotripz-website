@@ -62,3 +62,18 @@ html {
 :focus-visible {
   @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
 }
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: radial-gradient(hsl(var(--navy) / 0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .bg-mesh-gradient {
+    background: radial-gradient(at 10% 20%, hsl(var(--primary) / 0.04) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, hsl(var(--accent) / 0.03) 0px, transparent 50%);
+  }
+  .shadow-premium {
+    box-shadow: 0 12px 36px -12px rgb(var(--brand-shadow-rgb) / 0.075),
+                0 1px 3px -1px rgb(var(--brand-shadow-rgb) / 0.03);
+  }
+}
