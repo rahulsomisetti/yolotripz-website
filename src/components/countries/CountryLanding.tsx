@@ -371,13 +371,20 @@ export function CountryLandingFooterLinks() {
   );
 }
 
-export function CountryLanding({ content }: { content: CountryLandingContent }) {
+export function CountryLanding({
+  content,
+  afterCosts,
+}: {
+  content: CountryLandingContent;
+  afterCosts?: React.ReactNode;
+}) {
   return (
     <>
       <CountryHero content={content} />
       <CountryWho content={content} />
       <CountryIntakes content={content} />
       <CountryCosts content={content} />
+      {afterCosts}
       <CountryWorkVisa content={content} />
       <CountryLongTerm content={content} />
       <CountryCourses content={content} />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CountryLanding } from "@/components/countries/CountryLanding";
+import { NZDiplomaGuide } from "@/components/countries/NZDiplomaGuide";
 import { newZealandPage } from "@/content/countries/new-zealand";
 import { SITE } from "@/lib/constants";
 
@@ -20,5 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function NewZealandCountryPage() {
-  return <CountryLanding content={newZealandPage} />;
+  return <CountryLanding content={newZealandPage} afterCosts={<NZDiplomaGuide />} />;
 }
