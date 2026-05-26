@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Yolotripz",
   tagline: "Overseas education guidance since 2017",
-  city: "Mudbidri",
+  city: "Moodbidri",
   state: "Karnataka",
   country: "India",
   foundedYear: 2017,
@@ -15,12 +15,12 @@ export const SITE = {
 export const OFFICE = {
   /** Lines shown on Contact + footer-style contexts */
   addressLines: [
-    "Mudbidri, Dakshina Kannada district",
+    "Moodbidri, Dakshina Kannada district",
     "Karnataka, India",
   ] as const,
   /** Google Maps embed (no API key) — pin is approximate; swap for your exact embed snippet */
   mapEmbedUrl:
-    "https://maps.google.com/maps?q=Mudbidri%2C+Karnataka%2C+India&z=14&hl=en&output=embed",
+    "https://maps.google.com/maps?q=Moodbidri%2C+Karnataka%2C+India&z=14&hl=en&output=embed",
   hoursLabel: "Hours (by appointment)",
   hoursDetail: "Monday–Saturday · 10:00 am – 6:00 pm IST",
   note: "Counselling is by scheduled appointment — walk-ins may not always be available.",

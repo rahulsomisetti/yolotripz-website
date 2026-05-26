@@ -15,7 +15,7 @@ export function ContactMapOffice() {
       variant="default"
       eyebrow="Visit"
       title="Office & map"
-      description="Find us in Mudbidri — appointments help us protect uninterrupted counselling time for families."
+      description="Find us in Moodbidri — appointments help us protect uninterrupted counselling time for families."
       edge
       className="!py-16 md:!py-20"
     >

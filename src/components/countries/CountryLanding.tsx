@@ -23,9 +23,15 @@ function CountryHero({ content }: { content: CountryLandingContent }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background via-muted/40 to-background pb-24 pt-28 md:pb-32 md:pt-32 lg:pb-36 lg:pt-40">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_75%_0%,hsl(var(--navy)/0.05),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_75%_0%,hsl(var(--primary)/0.07),transparent_60%)]"
         aria-hidden
       />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10" aria-hidden="true">
+        {/* Glow Spot - Primary Green */}
+        <div className="absolute top-[10%] -left-[10%] w-[35rem] h-[35rem] rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.06)_0%,transparent_70%)] blur-[90px]" />
+        {/* Glow Spot - Accent Burgundy */}
+        <div className="absolute bottom-[10%] -right-[5%] w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.04)_0%,transparent_70%)] blur-[90px]" />
+      </div>
       <Container className="relative">
         <div className="max-w-3xl">
           <motion.p
@@ -92,9 +98,9 @@ function CountryWho({ content }: { content: CountryLandingContent }) {
       <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
         {content.whoItsFor.profiles.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.06}>
-            <Card className="relative h-full overflow-hidden border border-navy/[0.07] bg-card p-7 shadow-ring md:p-8">
+            <Card className="relative h-full overflow-hidden border border-navy/[0.05] bg-card p-7 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:-translate-y-1 hover:border-navy/[0.09] md:p-8">
               <div
-                className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-gold/70 to-gold/25"
+                className="absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b from-gold via-gold/50 to-transparent"
                 aria-hidden
               />
               <div className="pl-4">

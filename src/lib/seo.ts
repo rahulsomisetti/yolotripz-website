@@ -15,12 +15,14 @@ export const defaultMetadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Trusted overseas education counselling for PG admissions in the UK, Australia, New Zealand, and Canada. Based in Mudbidri, Karnataka — serving students and families across Coastal Karnataka since 2017.",
+    "Trusted overseas education counselling for UG and PG admissions in the UK, USA, Australia, New Zealand, Canada, and Ireland. Based in Moodbidri, Karnataka — serving families across Coastal Karnataka since 2017.",
   keywords: [
     "study abroad consultants Karnataka",
+    "overseas education Moodbidri",
     "overseas education Mangalore",
-    "UK study abroad consultants",
-    "Australia PG abroad consultants",
+    "UG study abroad consultants",
+    "PG study abroad consultants",
+    "UK USA study abroad consultants",
     "student visa guidance India",
     "Yolotripz",
   ],
@@ -30,7 +32,7 @@ export const defaultMetadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} | Overseas Education Consultants`,
     description:
-      "Calm, experienced guidance for PG study abroad — shortlisting, applications, visas, and travel support.",
+      "Calm, experienced guidance for UG and PG study abroad — shortlisting, applications, visas, and travel support.",
     images: [
       {
         url: brandAssets.ogShare,

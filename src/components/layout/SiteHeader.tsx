@@ -11,15 +11,32 @@ import { NAV_COUNTRIES_AFTER_HREF, NAV_ITEMS, SITE, getWhatsAppLink } from "@/li
 import { cn } from "@/lib/utils";
 
 const navLinkClass =
-  "rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:bg-muted/70 hover:text-navy";
+  "relative rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-navy";
 
-function renderDesktopNav() {
+function renderDesktopNav(hoveredId: string | null, setHoveredId: (id: string | null) => void) {
   return NAV_ITEMS.map((item) => (
     <span key={item.href} className="contents">
-      <Link href={item.href} className={navLinkClass}>
-        {item.label}
+      <Link
+        href={item.href}
+        className={navLinkClass}
+        onMouseEnter={() => setHoveredId(item.href)}
+      >
+        {hoveredId === item.href && (
+          <motion.span
+            layoutId="desktopNavHoverPill"
+            className="absolute inset-0 rounded-lg bg-muted/70"
+            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+          />
+        )}
+        <span className="relative z-10">{item.label}</span>
       </Link>
-      {item.href === NAV_COUNTRIES_AFTER_HREF ? <NavCountriesMenu variant="desktop" /> : null}
+      {item.href === NAV_COUNTRIES_AFTER_HREF ? (
+        <NavCountriesMenu
+          variant="desktop"
+          hoveredId={hoveredId}
+          setHoveredId={setHoveredId}
+        />
+      ) : null}
     </span>
   ));
 }
@@ -43,6 +60,7 @@ function renderMobileNav(onNavigate: () => void) {
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
   const reduce = useReducedMotion() === true;
 
   return (
@@ -50,8 +68,12 @@ export function SiteHeader() {
       <Container className="flex h-[3.75rem] items-center justify-between gap-3 md:h-[4.5rem] md:gap-4">
         <SiteLogo variant="primary" priority />
 
-        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
-          {renderDesktopNav()}
+        <nav
+          className="hidden items-center gap-0.5 lg:flex relative"
+          aria-label="Primary"
+          onMouseLeave={() => setHoveredId(null)}
+        >
+          {renderDesktopNav(hoveredId, setHoveredId)}
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">

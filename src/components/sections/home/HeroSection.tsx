@@ -13,7 +13,13 @@ export function HeroSection() {
   const reduce = reduceMotion === true;
 
   return (
-    <section className="border-b border-navy/[0.06] bg-gradient-to-b from-muted/50 via-background to-background">
+    <section className="relative overflow-hidden border-b border-navy/[0.06] bg-gradient-to-b from-muted/50 via-background to-background">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10" aria-hidden="true">
+        {/* Glow 1 - Primary HSL hue (dominant forest green) */}
+        <div className="absolute -top-[10%] -left-[10%] w-[45rem] h-[45rem] rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.07)_0%,transparent_70%)] blur-[100px]" />
+        {/* Glow 2 - Accent HSL hue (secondary warm/rose gold accent) */}
+        <div className="absolute top-[30%] -right-[10%] w-[40rem] h-[40rem] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.05)_0%,transparent_70%)] blur-[100px]" />
+      </div>
       <Container className="py-20 sm:py-24 md:py-28 lg:py-32">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-x-14 xl:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] xl:gap-x-20">
           <div className="min-w-0 lg:max-w-[44rem]">
@@ -76,9 +82,9 @@ export function HeroSection() {
               transition={{ duration: 0.45, delay: 0.28 }}
               className="mt-12 sm:mt-14"
             >
-              <div className="relative rounded-xl border border-navy/[0.08] bg-card p-6 shadow-ring sm:p-7">
+              <div className="relative rounded-2xl border border-navy/[0.06] bg-card/60 backdrop-blur-md p-6 shadow-soft transition-all duration-300 hover:shadow-soft-hover hover:border-navy/[0.1] sm:p-7">
                 <div
-                  className="absolute left-0 top-0 h-full w-[3px] rounded-l-xl bg-gradient-to-b from-gold/75 to-gold/35"
+                  className="absolute left-0 top-0 h-full w-[4px] rounded-l-2xl bg-gradient-to-b from-gold via-gold/50 to-transparent"
                   aria-hidden
                 />
                 <p className="pl-4 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[0.8125rem] sm:tracking-[0.15em]">

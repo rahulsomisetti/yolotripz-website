@@ -2,14 +2,14 @@ export const aboutHero = {
   eyebrow: "About Yolotripz",
   headline: "A small practice built on patience, clarity, and respect for family decisions.",
   subheadline:
-    "Since 2017 we have walked alongside students and parents across Coastal Karnataka — helping them plan PG study abroad without noise, pressure, or shortcuts that age poorly.",
+    "Since 2017 we have walked alongside students and parents across Coastal Karnataka — helping them plan UG and PG study abroad without noise, pressure, or shortcuts that age poorly.",
 } as const;
 
 export const aboutStory = {
   title: "Our story since 2017",
   paragraphs: [
-    "Yolotripz began in Mudbidri as a deliberately local desk — the kind of place where parents could sit down with a printed checklist, ask blunt questions about money, and leave with a plan that felt legible.",
-    "What started with a handful of PG applications grew into long-term relationships: siblings referred years apart, uncles calling about visa timelines, and students who still message us after their first semester abroad.",
+    "Yolotripz began in Moodbidri as a deliberately local desk — the kind of place where parents could sit down with a printed checklist, ask blunt questions about money, and leave with a plan that felt legible.",
+    "What started with a handful of UG and PG applications grew into long-term relationships: siblings referred years apart, uncles calling about visa timelines, and students who still message us after their first semester abroad.",
     "We never scaled into a call-centre model. That choice was intentional. Overseas education is not a transaction — it is a sequence of fragile decisions. We keep our caseload manageable so attention does not disappear the moment you pay a fee.",
   ],
 } as const;
@@ -20,7 +20,7 @@ export const aboutFounder = {
   bio: [
     "Veronica leads counselling end-to-end — from the first conversation about fit and budget, through shortlisting, documentation, and the quieter anxiety that often shows up after an offer arrives.",
     "Parents describe her as direct but gentle: she will challenge a weak plan when it needs challenging, and she will protect a family’s confidence when the process feels overwhelming.",
-    "She splits her time between Mudbidri and scheduled calls with families across the Mangalore belt — always with the same rule: no question is too small if it helps you sleep better that night.",
+    "She splits her time between Moodbidri and scheduled calls with families across the Mangalore belt — always with the same rule: no question is too small if it helps you sleep better that night.",
   ],
   imageAlt: "Veronica, founder of Yolotripz, in a counselling conversation",
 } as const;
@@ -69,8 +69,8 @@ export const aboutTrustReasons = {
 export const aboutMilestones = [
   {
     year: "2017",
-    title: "Doors open in Mudbidri",
-    detail: "Yolotripz begins with PG-focused counselling for UK and Australian pathways.",
+    title: "Doors open in Moodbidri",
+    detail: "Yolotripz begins with UG and PG-focused counselling for UK and Australian pathways.",
   },
   {
     year: "2018–2019",

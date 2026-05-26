@@ -103,6 +103,7 @@ export const visaServicesChecklists = {
       "English test or waiver proof where applicable",
       "Medical tests or insurance only if your route requires them",
       "Statement of purpose / study intent where the file calls for it",
+      "Student dependent visa requirements if travelling with family (marriage/birth certificates)",
       "Appointment confirmation, receipts, and copy sets for travel day",
     ],
   },
@@ -143,6 +144,10 @@ export const visaServicesFaqs = [
     q: "Is this legal advice?",
     a: "No. We provide practical documentation guidance and process support. If you need licensed legal representation for a complex case, we will say so plainly.",
   },
+  {
+    q: "Can my spouse or children join me on a dependent visa?",
+    a: "Many major destinations (including the UK, USA, Australia, and New Zealand) allow student dependents under specific eligibility rules, often linked to PG research or specific course classifications. We help families map relationship proofs, sponsorship forms, and synchronized timelines.",
+  },
 ] as const;
 
 export const visaServicesTrust = {
@@ -160,7 +165,7 @@ export const visaServicesTrust = {
     },
     {
       title: "Aligned with study abroad when it matters",
-      detail: "If you are already counselling with us for PG admissions, your visa story can stay aligned with your offer and intake — instead of contradicting it.",
+      detail: "If you are already counselling with us for UG or PG admissions, your visa story can stay aligned with your offer and intake — instead of contradicting it.",
     },
   ],
 } as const;

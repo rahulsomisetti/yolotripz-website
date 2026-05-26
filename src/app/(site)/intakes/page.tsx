@@ -65,7 +65,7 @@ export default async function IntakesPage() {
                           </Link>
                         </h2>
                         <p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">{a.summary}</p>
-                        {a.deadline ? (
+                        {a.deadline && !isNaN(new Date(a.deadline).getTime()) ? (
                           <p className="mt-3 text-xs text-muted-foreground">
                             Key date:{" "}
                             <time dateTime={a.deadline}>

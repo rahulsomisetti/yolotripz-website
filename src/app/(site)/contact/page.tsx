@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: "Contact & Book Counselling",
   description: `Book a free counselling session with ${SITE.name} in ${SITE.city}, ${SITE.state}. Enquiry form, WhatsApp, email, office map, and FAQs — mobile-friendly.`,
   keywords: [
-    "study abroad consultants Mudbidri",
-    "free PG counselling Karnataka",
+    "study abroad consultants Moodbidri",
+    "free UG and PG counselling Karnataka",
     "Yolotripz contact",
     "overseas education WhatsApp",
     "student visa counselling Mangalore",

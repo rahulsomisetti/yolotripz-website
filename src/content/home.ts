@@ -7,14 +7,14 @@ export const hero = {
 };
 
 export const trustItems = [
-  { label: "Since 2017", detail: "Mudbidri, Karnataka" },
-  { label: "PG-focused", detail: "Masters & diplomas abroad" },
+  { label: "Since 2017", detail: "Moodbidri, Karnataka" },
+  { label: "UG & PG Focus", detail: "Bachelors, Masters, Diplomas" },
   { label: "Visa & travel", detail: "Under one coordinated plan" },
   { label: "Personalised", detail: "Family-first counselling" },
 ] as const;
 
 export const trustBarIntro =
-  "What families look for first: longevity, focus on PG outcomes, and one team guiding the arc from shortlist to departure.";
+  "What families look for first: longevity, focus on UG & PG outcomes, and one team guiding the arc from shortlist to departure.";
 
 export const problemCards = [
   {
@@ -37,15 +37,23 @@ export const countries = [
     name: "United Kingdom",
     intakes: "Sep / Jan (select courses)",
     work: "Graduate Route (eligibility applies)",
-    profile: "Strong for 1-year PG programmes and research-led universities.",
+    profile: "Strong for dynamic UG degrees and intensive 1-year PG programmes.",
     href: "/countries/uk",
+  },
+  {
+    slug: "usa",
+    name: "United States",
+    intakes: "Aug / Jan (Fall & Spring)",
+    work: "OPT / STEM OPT extension (up to 3 years)",
+    profile: "Ideal for high-tier STEM/MBA courses, extensive research networks, and global career opportunities.",
+    href: "/countries/usa",
   },
   {
     slug: "australia",
     name: "Australia",
     intakes: "Feb / Jul (major intakes)",
     work: "Post-study work pathway (course & duration dependent)",
-    profile: "Ideal when you want structured PG coursework and global employability focus.",
+    profile: "Ideal for top-tier UG and structured PG coursework with a global employability focus.",
     href: "/countries/australia",
   },
   {
@@ -65,6 +73,14 @@ export const countries = [
     href: "/countries/canada",
   },
   {
+    slug: "ireland",
+    name: "Ireland",
+    intakes: "Sep / Jan",
+    work: "Third Level Graduate Scheme (up to 2 years)",
+    profile: "Vibrant English-speaking tech and pharma hub with great post-study work routes and strong ROI.",
+    href: "/countries/ireland",
+  },
+  {
     slug: "germany",
     name: "Germany",
     intakes: "Winter / Summer (varies by programme)",
@@ -77,7 +93,7 @@ export const countries = [
     name: "Emerging Europe & Asia",
     intakes: "Sep / Jan (market dependent)",
     work: "Varies by country — verified per destination",
-    profile: "Selective hubs for niche masters, ROI, and industry adjacency — diligence-heavy shortlisting.",
+    profile: "Selective hubs for niche masters, low-cost MBBS/Nursing, ROI, and industry adjacency — diligence-heavy shortlisting.",
     href: "/countries/emerging-europe-asia",
   },
 ] as const;
@@ -135,7 +151,7 @@ export const blogPosts = getBlogPostsForHomePreview();
 
 export const intakeCampaign = {
   title: "Don’t lose this September intake",
-  body: "If you are targeting September, the next few weeks decide how many strong options remain — especially for competitive PG courses and visa appointment slots.",
+  body: "If you are targeting September, the next few weeks decide how many strong options remain — especially for competitive UG/PG courses and visa appointment slots.",
   cta: "Check September feasibility",
   href: "/contact#book",
 } as const;
