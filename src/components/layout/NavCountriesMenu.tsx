@@ -13,6 +13,17 @@ type NavCountriesMenuProps = {
   setHoveredId?: (id: string | null) => void;
 };
 
+const countryFlags: Record<string, string> = {
+  usa: "🇺🇸",
+  canada: "🇨🇦",
+  uk: "🇬🇧",
+  ireland: "🇮🇪",
+  germany: "🇩🇪",
+  "emerging-europe-asia": "🇪🇺",
+  australia: "🇦🇺",
+  "new-zealand": "🇳🇿",
+};
+
 const regions = [
   {
     name: "North America",
@@ -99,9 +110,12 @@ export function NavCountriesMenu({ variant, onNavigate, hoveredId, setHoveredId 
                       key={c.href}
                       href={c.href}
                       role="menuitem"
-                      className="flex min-h-10 items-center rounded-lg px-3 py-2 text-xs text-muted-foreground transition-colors hover:bg-muted/80 hover:text-navy"
+                      className="flex min-h-10 items-center gap-2 rounded-lg px-3 py-2 text-xs text-muted-foreground transition-colors hover:bg-muted/80 hover:text-navy"
                       onClick={close}
                     >
+                      <span className="text-sm select-none shrink-0" aria-hidden="true">
+                        {countryFlags[c.slug as keyof typeof countryFlags]}
+                      </span>
                       {c.name}
                     </Link>
                   ))}
@@ -175,7 +189,10 @@ export function NavCountriesMenu({ variant, onNavigate, hoveredId, setHoveredId 
                         className="group block rounded-xl p-2 transition-all duration-200 hover:bg-muted/70"
                         onClick={close}
                       >
-                        <p className="font-display text-[0.875rem] font-semibold text-navy group-hover:text-primary flex items-center gap-1">
+                        <p className="font-display text-[0.875rem] font-semibold text-navy group-hover:text-primary flex items-center gap-1.5">
+                          <span className="text-base select-none shrink-0" aria-hidden="true">
+                            {countryFlags[c.slug as keyof typeof countryFlags]}
+                          </span>
                           {c.name}
                           <span className="text-[10px] text-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                             →

@@ -9,6 +9,17 @@ import { Card } from "@/components/ui/card";
 import { countries } from "@/content/home";
 import { siteImages } from "@/lib/site-images";
 
+const countryFlags: Record<string, string> = {
+  usa: "🇺🇸",
+  canada: "🇨🇦",
+  uk: "🇬🇧",
+  ireland: "🇮🇪",
+  germany: "🇩🇪",
+  "emerging-europe-asia": "🇪🇺",
+  australia: "🇦🇺",
+  "new-zealand": "🇳🇿",
+};
+
 export function CountryComparisonSection() {
   return (
     <Section
@@ -37,8 +48,11 @@ export function CountryComparisonSection() {
                       <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                         Destination
                       </p>
-                      <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-navy group-hover:text-primary md:text-xl">
-                        {c.name}
+                      <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-navy group-hover:text-primary md:text-xl flex items-center gap-2">
+                        <span className="text-xl select-none" aria-hidden="true">
+                          {countryFlags[c.slug as keyof typeof countryFlags]}
+                        </span>
+                        <span>{c.name}</span>
                       </h3>
                     </div>
                     <span
