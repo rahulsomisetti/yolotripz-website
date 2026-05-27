@@ -131,6 +131,11 @@ export const emergingEuropeAsiaPage = {
         detail:
           "The ‘best’ destination is often the one that matches your niche — we build shortlists around your career arc, not around what neighbours chose last year.",
       },
+      {
+        name: "Featured: Catholic Kwandong University (CKU), South Korea",
+        detail:
+          "Located in Gangneung, CKU offers 100% English-taught UG programs (Business, Computer Software, AI Healthcare, and Culinary). Features a $1,000 international freshman scholarship (reducing net tuition to $1,900/semester), free Korean classes, and structured visa pathways for the Fall 2026 intake cycle.",
+      },
     ],
   },
   faqs: [

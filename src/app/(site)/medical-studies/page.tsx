@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function MedicalStudiesPage() {
-  const { hero, whyChooseUs, destinations, faq } = medicalStudiesContent;
+  const { hero, whyChooseUs, destinations, faq, featuredNursing } = medicalStudiesContent;
 
   return (
     <div className="min-h-screen bg-background">
@@ -141,6 +141,82 @@ export default function MedicalStudiesPage() {
                 </div>
               </Card>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Georgia Nursing Featured Program Section */}
+      <section className="py-20 lg:py-24 border-t border-navy/[0.06]">
+        <Container>
+          <div className="relative overflow-hidden rounded-2xl border border-navy/[0.08] bg-gradient-to-b from-muted/40 via-card to-card px-8 py-10 shadow-ring sm:px-10 md:px-12 md:py-12">
+            <div
+              className="pointer-events-none absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-gold/70 via-gold/40 to-transparent"
+              aria-hidden
+            />
+            
+            <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-5">
+                <span className="inline-flex items-center gap-1 rounded-full bg-gold/10 border border-gold/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold">
+                  Nursing Spotlight
+                </span>
+                <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-navy">
+                  {featuredNursing.title}
+                </h2>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">
+                  Featured University: {featuredNursing.university}
+                </p>
+
+                <div className="mt-6 space-y-4">
+                  <div className="border-b border-navy/[0.06] pb-3">
+                    <span className="text-xs text-muted-foreground block">Degree Details</span>
+                    <span className="font-display font-medium text-navy text-sm">{featuredNursing.duration}</span>
+                  </div>
+                  <div className="border-b border-navy/[0.06] pb-3">
+                    <span className="text-xs text-muted-foreground block">Yearly Tuition</span>
+                    <span className="font-display font-semibold text-primary text-xl">
+                      {featuredNursing.tuition} <span className="text-xs text-muted-foreground">/ {featuredNursing.period}</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted-foreground block">Admissions Timeline</span>
+                    <span className="font-display font-medium text-navy text-sm">{featuredNursing.intake}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 bg-muted/20 border border-navy/[0.06] p-6 sm:p-8 rounded-2xl">
+                <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-navy mb-4">Program Advantages</h3>
+                <ul className="space-y-3.5">
+                  {featuredNursing.highlights.map((hl, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <CheckCircle2 className="h-4.5 w-4.5 shrink-0 text-primary mt-0.5" />
+                      <span>{hl}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 p-3 bg-card border border-navy/[0.06] rounded-xl flex items-center gap-2">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">Requirements</span>
+                  <span className="text-xs text-navy font-medium">{featuredNursing.requirements}</span>
+                </div>
+
+                <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                  <ButtonLink
+                    href={getWhatsAppLink(`Hi Yolotripz, I'm interested in the Nursing BSN program at SEU in Georgia.`)}
+                    variant="primary"
+                    className="flex-1 text-center"
+                  >
+                    Apply for BSN Program
+                  </ButtonLink>
+                  <ButtonLink
+                    href="/contact#book"
+                    variant="secondary"
+                    className="flex-1 text-center"
+                  >
+                    Request Free Assessment
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

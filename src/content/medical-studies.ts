@@ -114,4 +114,20 @@ export const medicalStudiesContent = {
       a: "Clinical rotations are conducted in affiliated state-of-the-art hospitals starting in your 2nd or 3rd year, ensuring direct interaction with patients under clinical expert supervision.",
     },
   ],
+  featuredNursing: {
+    title: "Become a Nurse in Georgia",
+    university: "Georgian National University (SEU)",
+    duration: "Bachelor of Nursing (BSN) · 4 Years",
+    tuition: "USD 3,500",
+    period: "Yearly",
+    intake: "March Intake Available",
+    highlights: [
+      "Internationally recognized degree taught entirely in English",
+      "Highly affordable tuition & low cost of living with no application fee",
+      "State-of-the-art hospitals and advanced simulation labs from Year 1",
+      "No IELTS required (Medium of Instruction - MOI proof accepted)",
+      "High student visa success rates & direct career pathways to Europe, the U.S., and Asia",
+    ],
+    requirements: "Minimum 55-60% in Grade 12 (PCB stream).",
+  },
 };
