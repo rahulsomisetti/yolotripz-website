@@ -15,13 +15,15 @@ import {
 } from "@/components/ui/accordion";
 import type { CountryLandingContent } from "@/content/countries/types";
 import { getWhatsAppLink } from "@/lib/constants";
+import { SiteFigureImage } from "@/components/images/SiteFigureImage";
 
 function CountryHero({ content }: { content: CountryLandingContent }) {
   const reduce = useReducedMotion() === true;
   const w = getWhatsAppLink(content.whatsappPreset);
+  const countryImageUrl = `/images/countries/${content.slug}-card.jpg`;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background via-muted/40 to-background pb-24 pt-28 md:pb-32 md:pt-32 lg:pb-36 lg:pt-40">
+    <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 via-background to-background pb-20 pt-28 md:pb-24 md:pt-32 lg:pb-28 lg:pt-36">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_75%_0%,hsl(var(--primary)/0.07),transparent_60%)]"
         aria-hidden
@@ -33,52 +35,69 @@ function CountryHero({ content }: { content: CountryLandingContent }) {
         <div className="absolute bottom-[10%] -right-[5%] w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.04)_0%,transparent_70%)] blur-[90px]" />
       </div>
       <Container className="relative">
-        <div className="max-w-3xl">
-          <motion.p
-            initial={reduce ? false : { opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, ease: [0.22, 0.08, 0.24, 1] }}
-            className="text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-xs"
-          >
-            {content.hero.eyebrow}
-          </motion.p>
-          <motion.h1
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 0.08, 0.24, 1] }}
-            className="mt-6 text-balance font-display text-[1.875rem] font-semibold leading-[1.08] tracking-[-0.02em] text-navy sm:text-5xl sm:leading-[1.06] lg:text-[3.15rem]"
-          >
-            {content.hero.headline}
-          </motion.h1>
-          <motion.p
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 0.08, 0.24, 1] }}
-            className="mt-8 max-w-2xl text-pretty text-base leading-[1.7] text-muted-foreground sm:text-lg sm:leading-[1.62]"
-          >
-            {content.hero.subheadline}
-          </motion.p>
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-x-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] xl:gap-x-16">
+          <div className="min-w-0 lg:max-w-[40rem]">
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: [0.22, 0.08, 0.24, 1] }}
+              className="text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-gold sm:text-xs"
+            >
+              {content.hero.eyebrow}
+            </motion.p>
+            <motion.h1
+              initial={reduce ? false : { opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 0.08, 0.24, 1] }}
+              className="mt-5 text-balance font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.02em] text-navy sm:text-4xl lg:text-[2.75rem]"
+            >
+              {content.hero.headline}
+            </motion.h1>
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 0.08, 0.24, 1] }}
+              className="mt-6 text-pretty text-base leading-[1.65] text-muted-foreground"
+            >
+              {content.hero.subheadline}
+            </motion.p>
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.16, ease: [0.22, 0.08, 0.24, 1] }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+            >
+              <ButtonLink href="/contact#book" variant="primary" className="w-full sm:w-auto text-center">
+                {content.bookCounsellingLabel}
+              </ButtonLink>
+              <ButtonLink href={w} variant="secondary" className="w-full sm:w-auto text-center">
+                WhatsApp us
+              </ButtonLink>
+            </motion.div>
+            <motion.p
+              initial={reduce ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.22 }}
+              className="mt-8 text-xs leading-relaxed text-muted-foreground"
+            >
+              {content.hero.footnote}
+            </motion.p>
+          </div>
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.16, ease: [0.22, 0.08, 0.24, 1] }}
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+            initial={reduce ? false : { opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.12, ease: [0.22, 0.08, 0.24, 1] }}
+            className="relative"
           >
-            <ButtonLink href="/contact#book" variant="primary" className="w-full sm:w-auto">
-              {content.bookCounsellingLabel}
-            </ButtonLink>
-            <ButtonLink href={w} variant="secondary" className="w-full sm:w-auto">
-              WhatsApp a question
-            </ButtonLink>
+            <SiteFigureImage
+              src={countryImageUrl}
+              alt={`Study in ${content.hero.eyebrow.split(" ").pop()}`}
+              priority
+              aspectClassName="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]"
+              figureClassName="overflow-hidden rounded-2xl border border-navy/[0.08] shadow-soft"
+              sizes="(max-width: 1024px) 100vw, 28rem"
+            />
           </motion.div>
-          <motion.p
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.22 }}
-            className="mt-11 text-sm leading-[1.65] text-muted-foreground"
-          >
-            {content.hero.footnote}
-          </motion.p>
         </div>
       </Container>
     </section>
@@ -355,7 +374,7 @@ export function CountryLandingFooterLinks() {
           href="/study-abroad"
           className="text-sm font-semibold text-navy underline-offset-[5px] transition-colors hover:text-primary hover:underline"
         >
-          PG study abroad overview
+          UG & PG study abroad overview
         </Link>
         <span className="hidden text-muted-foreground/70 sm:inline" aria-hidden>
           ·

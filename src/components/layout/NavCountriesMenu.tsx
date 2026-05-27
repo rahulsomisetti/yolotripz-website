@@ -209,7 +209,7 @@ export function NavCountriesMenu({ variant, onNavigate, hoveredId, setHoveredId 
             </div>
             <div className="mt-6 flex items-center justify-between border-t border-navy/5 pt-4">
               <p className="text-[11px] text-muted-foreground">
-                All guides are PG and admissions-focused.
+                All guides cover UG & PG admissions.
               </p>
               <Link
                 href="/study-abroad"
