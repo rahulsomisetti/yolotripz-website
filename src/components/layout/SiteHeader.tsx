@@ -65,6 +65,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-navy/[0.06] bg-background/88 backdrop-blur-md supports-[backdrop-filter]:bg-background/78">
+      {/* Premium Notification Ribbon */}
+      <div className="bg-gradient-to-r from-gold/10 via-gold/15 to-gold/5 border-b border-gold/10 py-1.5 text-center">
+        <p className="text-[10px] sm:text-xs font-semibold text-gold tracking-wide flex items-center justify-center gap-1.5">
+          <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse shrink-0" />
+          <span>Fall 2026 application deadlines are active. Secure your university fee waivers through our priority counsellors.</span>
+          <Link href="/contact#book" className="underline hover:text-navy transition-colors ml-1">
+            Apply Now →
+          </Link>
+        </p>
+      </div>
+
       <Container className="flex h-[3.75rem] items-center justify-between gap-3 md:h-[4.5rem] md:gap-4">
         <SiteLogo variant="primary" priority />
 
@@ -76,9 +87,25 @@ export function SiteHeader() {
           {renderDesktopNav(hoveredId, setHoveredId)}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <ButtonLink href={getWhatsAppLink()} variant="ghost" className="px-4">
-            WhatsApp
+        <div className="hidden items-center gap-3.5 lg:flex">
+          <Link
+            href="/compare"
+            className="text-xs font-semibold text-muted-foreground hover:text-navy transition-colors"
+          >
+            Compare
+          </Link>
+          <Link
+            href="/calculator"
+            className="text-xs font-semibold text-muted-foreground hover:text-navy transition-colors"
+          >
+            Calculator
+          </Link>
+          <ButtonLink
+            href="/discover"
+            variant="secondary"
+            className="px-3.5 py-1.5 text-xs font-semibold border-gold/30 text-gold hover:bg-gold/5 rounded-full"
+          >
+            Course Finder
           </ButtonLink>
           <ButtonLink href="/contact#book" variant="primary" className="px-5">
             Book counselling
@@ -146,6 +173,35 @@ export function SiteHeader() {
                   {SITE.name}
                 </span>
               </div>
+
+              {/* Thumb-friendly mobile quick actions dashboard */}
+              <div className="grid grid-cols-3 gap-2 py-2 my-1 border-b border-navy/[0.06]">
+                <Link
+                  href="/compare"
+                  className="flex flex-col items-center justify-center p-2 rounded-xl bg-muted/40 hover:bg-muted/80 text-center"
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="text-base select-none">🔄</span>
+                  <span className="text-[10px] font-semibold text-navy mt-1">Compare</span>
+                </Link>
+                <Link
+                  href="/calculator"
+                  className="flex flex-col items-center justify-center p-2 rounded-xl bg-muted/40 hover:bg-muted/80 text-center"
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="text-base select-none">🧮</span>
+                  <span className="text-[10px] font-semibold text-navy mt-1">Calculator</span>
+                </Link>
+                <Link
+                  href="/discover"
+                  className="flex flex-col items-center justify-center p-2 rounded-xl bg-muted/40 hover:bg-muted/80 text-center"
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="text-base select-none">🎯</span>
+                  <span className="text-[10px] font-semibold text-navy mt-1">Finder</span>
+                </Link>
+              </div>
+
               {renderMobileNav(() => setOpen(false))}
               <Link
                 href={getWhatsAppLink()}
