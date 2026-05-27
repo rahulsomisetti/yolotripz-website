@@ -166,6 +166,24 @@ export const countriesDb: CountryData[] = [
     whyStudyHere: "Zero tuition fees in public universities, world-leading heavy machinery and automotive industries, and high post-study job seeker security.",
     popularFields: ["Automotive Engineering", "Data Analytics", "Power Engineering", "Mechatronics", "Logistics"],
   },
+  {
+    slug: "emerging-europe-asia",
+    name: "Emerging Europe & Asia",
+    flag: "🇪🇺",
+    region: "Europe & Asia",
+    tuitionBand: "$3,000 – $8,000 / Year",
+    livingCosts: "$2,500 – $4,500 / Year",
+    prPathway: "Varies by Country Hub (e.g. EU Blue Card in Germany, Job Seeker options elsewhere)",
+    workRights: "Varies by Country Hub (typically 20 hours per week during studies)",
+    salaryExpectation: "$25,000 – $45,000 / Year (Starting average)",
+    climate: "Varies (Continental in Europe, subtropical in Asia)",
+    topCities: ["Tbilisi", "Seoul", "Gangneung", "Vilnius", "Budapest"],
+    visaSuccessRate: "95%",
+    ieltsRequirement: "5.5 - 6.0 overall / Medium of Instruction (MOI) letters accepted",
+    intakeDeadlines: "Fall Intake: June-July | Spring Intake: Nov-Dec",
+    whyStudyHere: "Highly affordable English-taught medical, healthcare, software, and AI programs with excellent global recognition, low living costs, and rich cultural experiences.",
+    popularFields: ["MBBS & Medical Studies", "Nursing", "Computer Software", "AI Healthcare", "Culinary Arts"],
+  },
 ];
 
 export const universitiesDb: UniversityData[] = [
