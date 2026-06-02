@@ -15,8 +15,8 @@ export function CoreProblemSection() {
     <Section
       id="why-planning-matters"
       eyebrow="The real risk"
-      title="Choosing the wrong country or course can cost ₹30–50 lakhs — and one to two years."
-      description="Studying abroad is not a single decision. It is a chain of decisions. When the chain is weak, families feel it first in stress — and later in time and money."
+      title="Studying abroad shouldn't mean losing the peace in your home."
+      description="When parents carry the financial weight and students carry the career anxiety, what helps is a predictable process."
       variant="default"
       edge
     >

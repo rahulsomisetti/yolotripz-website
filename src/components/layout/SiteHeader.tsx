@@ -14,7 +14,10 @@ const navLinkClass =
   "relative rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-navy";
 
 function renderDesktopNav(hoveredId: string | null, setHoveredId: (id: string | null) => void) {
-  return NAV_ITEMS.map((item) => (
+  const desktopNavItems = NAV_ITEMS.filter(
+    (item) => item.href !== "/intakes" && item.href !== "/faq" && item.href !== "/contact"
+  );
+  return desktopNavItems.map((item) => (
     <span key={item.href} className="contents">
       <Link
         href={item.href}

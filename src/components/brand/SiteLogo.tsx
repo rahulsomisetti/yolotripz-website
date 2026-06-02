@@ -44,7 +44,7 @@ export function SiteLogo({
     <Link
       href="/"
       className={cn(
-        "relative block h-8 w-[9.25rem] shrink-0 outline-none transition-opacity hover:opacity-[0.9] focus-visible:opacity-100 sm:w-[10.5rem] md:h-9 md:w-[12rem]",
+        "relative block h-10 w-[11.5rem] shrink-0 outline-none transition-opacity hover:opacity-[0.9] focus-visible:opacity-100 sm:w-[13.5rem] md:h-11 md:w-[15rem]",
         linkClassName,
       )}
       aria-label={`${SITE.name} — home`}
@@ -55,7 +55,7 @@ export function SiteLogo({
         fill
         priority={priority}
         className="object-contain object-left"
-        sizes="(max-width: 640px) 148px, 192px"
+        sizes="(max-width: 640px) 180px, 240px"
       />
     </Link>
   );

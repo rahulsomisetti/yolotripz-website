@@ -99,8 +99,8 @@ export function SiteFooter() {
                 Note
               </p>
               <p className="mt-5 text-sm leading-[1.7] text-muted-foreground">
-                Visa and immigration rules change by country. We guide on documentation and
-                timelines; final decisions rest with consulates and institutions.
+                No false promises. While final decisions always rest with consulates, we provide
+                the meticulous timeline and document discipline that gives your file its best possible shot.
               </p>
             </div>
           </div>

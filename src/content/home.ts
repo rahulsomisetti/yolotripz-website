@@ -1,9 +1,9 @@
 import { getBlogPostsForHomePreview } from "@/content/insights";
 
 export const hero = {
-  headline: "Helping students make smarter study abroad decisions since 2017",
+  headline: "Make your study abroad decision with absolute clarity and zero guesswork.",
   subheadline:
-    "Trusted overseas education guidance for students and families across Coastal Karnataka — clear shortlisting, careful applications, and coordinated visa and travel support.",
+    "Your education is the most important journey you'll ever take. We handle the complex university admissions and visa logistics so your transition abroad is seamless, secure, and stress-free.",
 };
 
 export const trustItems = [
@@ -19,15 +19,15 @@ export const trustBarIntro =
 export const problemCards = [
   {
     title: "The cost of a wrong fit",
-    body: "A course or country that doesn’t match your goals can mean ₹30–50 lakhs spent without the outcome you expected — plus lost time rebuilding your plan.",
+    body: "A course or country that doesn’t match your goals can mean ₹30–50 lakhs spent without the outcome you expected — plus lost time in preparing and rebuilding your plan.",
   },
   {
-    title: "Deadlines compound quietly",
+    title: "Deadlines compound",
     body: "September and January intakes have early cut-offs for deposits, CAS/COE steps, and visa appointments. A late start shrinks your best options.",
   },
   {
     title: "Stress shows up at home",
-    body: "Parents carry the financial weight; students carry the uncertainty. What helps is a calm process — timelines you can see, and decisions explained in plain language.",
+    body: "Parents carry the financial weight; students carry the career anxiety. What helps is a predictable process — timelines you can see, no guesswork, no panic.",
   },
 ] as const;
 
@@ -151,7 +151,7 @@ export const blogPosts = getBlogPostsForHomePreview();
 
 export const intakeCampaign = {
   title: "Don’t lose this September intake",
-  body: "If you are targeting September, the next few weeks decide how many strong options remain — especially for competitive UG/PG courses and visa appointment slots.",
+  body: "If you are targeting September, the next few weeks decide how many strong options remain — especially for competitive UG/PG courses and visa appointment slots. The previous priority window has already closed; starting today ensures you avoid late-stage consulate backlogs.",
   cta: "Check September feasibility",
   href: "/contact#book",
 } as const;

@@ -4,17 +4,14 @@ import {
   BlogPreviewSection,
   CoreProblemSection,
   CountryComparisonSection,
-  FinalCtaSection,
   HeroSection,
   ProcessSection,
   SeptemberIntakeSection,
-  TestimonialsSection,
   TrustBarSection,
   WhyYolotripzSection,
 } from "@/components/sections/home";
 import { SITE } from "@/lib/constants";
 import { defaultMetadata, organizationJsonLd } from "@/lib/seo";
-import { fetchHomepageTestimonials } from "@/sanity/fetchers";
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -33,11 +30,6 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const jsonLd = organizationJsonLd();
-  const cmsTestimonials = await fetchHomepageTestimonials().catch(() => [] as { quote: string; name: string; meta?: string | null }[]);
-  const testimonialItems =
-    cmsTestimonials.length > 0
-      ? cmsTestimonials.map((t) => ({ quote: t.quote, name: t.name, meta: t.meta ?? undefined }))
-      : undefined;
 
   return (
     <>
@@ -49,15 +41,13 @@ export default async function HomePage() {
         {JSON.stringify(jsonLd)}
       </Script>
       <HeroSection />
-      <TrustBarSection />
       <CoreProblemSection />
-      <CountryComparisonSection />
-      <WhyYolotripzSection />
-      <ProcessSection />
-      <TestimonialsSection items={testimonialItems} />
+      <TrustBarSection />
       <SeptemberIntakeSection />
+      <CountryComparisonSection />
+      <ProcessSection />
+      <WhyYolotripzSection />
       <BlogPreviewSection />
-      <FinalCtaSection />
     </>
   );
 }

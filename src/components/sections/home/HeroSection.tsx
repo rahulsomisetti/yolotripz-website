@@ -22,8 +22,8 @@ export function HeroSection() {
         <div className="absolute top-[30%] -right-[10%] w-[40rem] h-[40rem] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.06)_0%,transparent_70%)] blur-[100px]" />
       </div>
       <Container className="py-20 sm:py-24 md:py-28 lg:py-32">
-        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-x-14 xl:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] xl:gap-x-20">
-          <div className="min-w-0 lg:max-w-[44rem]">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-x-16">
+          <div className="min-w-0">
             <motion.p
               initial={reduce ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function HeroSection() {
               transition={{ duration: 0.45, delay: 0.22 }}
               className="mt-4 max-w-xl text-center text-xs leading-snug text-muted-foreground sm:text-left sm:text-[0.8125rem]"
             >
-              First conversation is free · No obligation · Most calls are ~20 minutes
+              Free opportunity mapping call · Parents are encouraged to join · Start with clarity in mind
             </motion.p>
             <motion.div
               initial={reduce ? false : { opacity: 0, y: 15 }}
@@ -125,7 +125,7 @@ export function HeroSection() {
               priority
               aspectClassName="aspect-[5/4] sm:aspect-[4/3]"
               objectClassName="object-cover object-[center_28%] sm:object-center"
-              sizes="(max-width: 1024px) 100vw, 30rem"
+              sizes="(max-width: 1024px) 100vw, 38rem"
             />
             <aside className="hidden border-t border-navy/[0.08] pt-8 lg:block">
               <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">

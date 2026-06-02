@@ -16,7 +16,6 @@ import {
   filterInsightPosts,
   insightHref,
 } from "@/content/insights";
-import { SITE } from "@/lib/constants";
 import { postLead } from "@/lib/leads/client";
 
 type Props = {
@@ -82,8 +81,8 @@ export function InsightsIndex({ allPostsSorted, featured, categories, popularTop
               Calmer decisions for study abroad families.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.65] text-muted-foreground sm:text-lg">
-              Practical framing on intakes, visas, scholarships, PG courses, and country trade-offs
-              — written for SEO and for parents who want authority without noise.
+              Practical, hype-free frameworks on intakes, visas, scholarships, and country trade-offs.
+              Built for parents and PG applicants who value clear authority over marketing noise.
             </p>
           </div>
         </Container>
@@ -148,7 +147,7 @@ export function InsightsIndex({ allPostsSorted, featured, categories, popularTop
         variant="muted"
         eyebrow="Browse"
         title="Categories"
-        description="Filter articles by theme. Same taxonomy you can map 1:1 from a headless CMS collection."
+        description="Filter by theme to find exactly what your family is discussing today."
         className="!py-16 md:!py-20"
       >
         <div className="flex flex-wrap gap-2 md:gap-3">
@@ -402,8 +401,7 @@ function InsightsNewsletter() {
             </button>
           </form>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-            We store your request as a lead in our private CRM so the team can add you to the right
-            list. You can also email us directly at {SITE.email}.
+            We protect your data. Your email is securely saved only to send you relevant intake updates—never shared, never spammed.
           </p>
           {error ? (
             <p className="mt-3 text-sm text-destructive" role="alert">
