@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+// Trigger redeployment build: 2026-07-07
 
 const securityHeaders = [
   {
