@@ -3,6 +3,7 @@ import { SiteLogo } from "@/components/brand/SiteLogo";
 import { Container } from "@/components/layout/Container";
 import { ButtonLink } from "@/components/ui/button";
 import { NAV_ITEMS, SITE, getWhatsAppLink } from "@/lib/constants";
+import { CookiePreferencesButton } from "@/components/analytics/CookiePreferencesButton";
 
 export function SiteFooter() {
   return (
@@ -106,9 +107,11 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-16 flex flex-col gap-3 border-t border-navy/[0.06] pt-10 text-xs leading-relaxed text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
-          </p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
+            <span className="hidden sm:inline text-navy/20">•</span>
+            <CookiePreferencesButton />
+          </div>
           <p className="max-w-xl sm:text-right">
             {SITE.name} is an education consultancy based in {SITE.city}, {SITE.state}.
           </p>
